@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:math";
+
+$flatVariants: (
+  "success",
+  "danger",
+  "warning",
+  "primary",
+  "secondary",
+  "info",
+  "gray"
+);
+
+@mixin base-variant {
+  background: var(string.unquote("--pro-color-base-600"));
+
+  &:hover {
+    background: var(string.unquote("--pro-color-base-400"));
+  }
+}
+
+@mixin color-variants {
+  @each $variant in $flatVariants {
+    &.#{$variant} {
+      background: var(string.unquote("--pro-color-#{$variant}-600"));
+      color: var(--pro-color-white);
+
+      &:hover {
+        background: var(string.unquote("--pro-color-#{$variant}-700"));
+      }
+
+      @if $variant == "base" {
+        @include base-variant;
+      }
+    }
+  }
+}
