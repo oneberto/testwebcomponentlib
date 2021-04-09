@@ -1,51 +1,126 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-        <title>Stencil Component Starter</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
 
-        <script type="module" src="/build/prodigio-components.esm.js"></script>
-        <script nomodule src="/build/prodigio-components.js"></script>
+    <script type="module" src="/build/prodigio-components.esm.js"></script>
+    <script nomodule src="/build/prodigio-components.js"></script>
 
-        <script>
-            window.que;
-        </script>
-        <link rel="stylesheet" href="./index.css?v1" />
-    </head>
+    <script>
+      window.que;
+    </script>
+    <link rel="stylesheet" href="./index.css?v1" />
 
-    <body bgcolor="#fafafc">
-        <p>small</p>
-        <div>
-            <pro-button variant="primary">primary</pro-button>
-            <pro-button variant="secondary">secondary</pro-button>
-            <pro-button variant="success">success</pro-button>
-            <pro-button variant="danger">danger</pro-button>
-            <pro-button variant="warning">warning</pro-button>
-            <pro-button variant="info">info</pro-button>
-            <pro-button variant="neutral">neutral</pro-button>
-        </div>
+    <style>
+      /* PROMILITARES COLORS */
 
-        <p>medium</p>
-        <div>
-            <pro-button variant="primary" size="medium">primary</pro-button>
-            <pro-button variant="secondary" size="medium">secondary</pro-button>
-            <pro-button variant="success" size="medium">success</pro-button>
-            <pro-button variant="danger" size="medium">danger</pro-button>
-            <pro-button variant="warning" size="medium">warning</pro-button>
-            <pro-button variant="info" size="medium">info</pro-button>
-            <pro-button variant="neutral" size="medium">neutral</pro-button>
-        </div>
+      :root {
+        --pro-color-base-100: #fafafc;
+        --pro-color-base-200: #f0f1f7;
+        --pro-color-base-300: #ced0dd;
+        --pro-color-base-400: #9c9fb0;
+        --pro-color-base-500: #7c8195;
+        --pro-color-base-600: #666b7b;
+        --pro-color-base-700: #505462;
+        --pro-color-base-800: #3a3e47;
+        --pro-color-base-900: #25272d;
+        --pro-color-black: #000000;
+        --pro-color-primary-100: #f3f9f7;
+        --pro-color-primary-200: #bcdcce;
+        --pro-color-primary-300: #85bfa5;
+        --pro-color-primary-400: #4da37a;
+        --pro-color-primary-500: #15874e;
+        --pro-color-primary-600: #0f6e3c;
+        --pro-color-primary-700: #0a542b;
+        --pro-color-primary-800: #06391b;
+        --pro-color-primary-900: #021d0d;
+        --pro-color-secondary-100: #fffdf5;
+        --pro-color-secondary-200: #fef3c8;
+        --pro-color-secondary-300: #fee79a;
+        --pro-color-secondary-400: #feda6b;
+        --pro-color-secondary-500: #ffcb3c;
+        --pro-color-secondary-600: #cca02d;
+        --pro-color-secondary-700: #997620;
+        --pro-color-secondary-800: #664d14;
+        --pro-color-secondary-900: #332509;
+        --pro-color-danger-100: #fff6f5;
+        --pro-color-danger-200: #fcd1d1;
+        --pro-color-danger-300: #f7a4a5;
+        --pro-color-danger-400: #f17a7b;
+        --pro-color-danger-500: #e85153;
+        --pro-color-danger-600: #de2a2c;
+        --pro-color-danger-700: #b41f21;
+        --pro-color-danger-800: #891517;
+        --pro-color-danger-900: #5d0d0e;
+        --pro-color-info-100: #edf5ff;
+        --pro-color-info-200: #c6e0fe;
+        --pro-color-info-300: #9dcafe;
+        --pro-color-info-400: #74b4fe;
+        --pro-color-info-500: #4b9eff;
+        --pro-color-info-600: #3a80cf;
+        --pro-color-info-700: #2b629f;
+        --pro-color-info-800: #1d4570;
+        --pro-color-info-900: #102740;
+        --pro-color-success-100: #d1f3e7;
+        --pro-color-success-200: #a5e6cf;
+        --pro-color-success-300: #7ad7b6;
+        --pro-color-success-400: #50c79d;
+        --pro-color-success-500: #28b583;
+        --pro-color-success-600: #1e9369;
+        --pro-color-success-700: #157050;
+        --pro-color-success-800: #0d4b35;
+        --pro-color-success-900: #06261b;
+        --pro-color-warning-100: #fffdf5;
+        --pro-color-warning-200: #feefd2;
+        --pro-color-warning-300: #fddea4;
+        --pro-color-warning-400: #fdcb76;
+        --pro-color-warning-500: #feb647;
+        --pro-color-warning-600: #ff9f18;
+        --pro-color-warning-700: #dc8511;
+        --pro-color-warning-800: #b96b0b;
+        --pro-color-warning-900: #965307;
+        --pro-color-white: #ffffff;
+      }
+    </style>
+  </head>
 
-        <p>large</p>
-        <div>
-            <pro-button variant="primary" size="large">primary</pro-button>
-            <pro-button variant="secondary" size="large">secondary</pro-button>
-            <pro-button variant="success" size="large">success</pro-button>
-            <pro-button variant="danger" size="large">danger</pro-button>
-            <pro-button variant="warning" size="large">warning</pro-button>
-            <pro-button variant="info" size="large">info</pro-button>
-            <pro-button variant="neutral" size="large">neutral</pro-button>
-        </div>
-    </body>
+  <body bgcolor="#fafafc">
+    <p>small</p>
+    <div>
+      <pro-button variant="primary">primary</pro-button>
+      <pro-button variant="secondary">secondary</pro-button>
+      <pro-button variant="success">success</pro-button>
+      <pro-button variant="danger">danger</pro-button>
+      <pro-button variant="warning">warning</pro-button>
+      <pro-button variant="info">info</pro-button>
+      <pro-button variant="neutral">neutral</pro-button>
+    </div>
+
+    <p>medium</p>
+    <div>
+      <pro-button variant="primary" size="medium">primary</pro-button>
+      <pro-button variant="secondary" size="medium">secondary</pro-button>
+      <pro-button variant="success" size="medium">success</pro-button>
+      <pro-button variant="danger" size="medium">danger</pro-button>
+      <pro-button variant="warning" size="medium">warning</pro-button>
+      <pro-button variant="info" size="medium">info</pro-button>
+      <pro-button variant="neutral" size="medium">neutral</pro-button>
+    </div>
+
+    <p>large</p>
+    <div>
+      <pro-button variant="primary" size="large">primary</pro-button>
+      <pro-button variant="secondary" size="large">secondary</pro-button>
+      <pro-button variant="success" size="large">success</pro-button>
+      <pro-button variant="danger" size="large">danger</pro-button>
+      <pro-button variant="warning" size="large">warning</pro-button>
+      <pro-button variant="info" size="large">info</pro-button>
+      <pro-button variant="neutral" size="large">neutral</pro-button>
+    </div>
+  </body>
 </html>
