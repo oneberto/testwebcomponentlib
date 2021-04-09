@@ -1,0 +1,33 @@
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.custom-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 15px;
+}
+
+.custom-button.danger {
+  background: red;
+}
+
+.custom-button.primary {
+  background: blue;
+}
+
+.custom-button.warning {
+  background: orange;
+}
+
+.custom-button.warning:hover {
+  background: #b07811;
+}
+/*# sourceMappingURL=pro-button.css.map */

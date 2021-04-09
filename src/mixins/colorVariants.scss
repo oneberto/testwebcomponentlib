@@ -1,0 +1,64 @@
+@mixin color-variants {
+    &.primary {
+        background: var(--pro-color-primary-500);
+        color: var(--pro-color-white);
+
+        &:hover {
+            background: var(--pro-color-primary-700);
+        }
+    }
+
+    &.secondary {
+        background: var(--pro-color-secondary-600);
+        color: var(--pro-color-white);
+
+        &:hover {
+            background: var(--pro-color-secondary-400);
+        }
+    }
+
+    &.neutral {
+        background: var(--pro-color-gray-600);
+        color: var(--pro-color-white);
+
+        &:hover {
+            background: var(--pro-color-gray-400);
+        }
+    }
+
+    &.success {
+        background: var(--pro-color-success-600);
+        color: var(--pro-color-white);
+
+        &:hover {
+            background: var(--pro-color-success-700);
+        }
+    }
+
+    &.info {
+        background: var(--pro-color-info-600);
+        color: var(--pro-color-white);
+
+        &:hover {
+            background: var(--pro-color-info-700);
+        }
+    }
+
+    &.warning {
+        background: var(--pro-color-warning-500);
+        color: var(--pro-color-warning-900);
+
+        &:hover {
+            background: var(--pro-color-warning-600);
+        }
+    }
+
+    &.danger {
+        background: var(--pro-color-danger-500);
+        color: var(--pro-color-white);
+
+        &:hover {
+            background: var(--pro-color-danger-600);
+        }
+    }
+}

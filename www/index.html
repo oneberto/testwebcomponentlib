@@ -1,0 +1,12 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" src="/build/prodigio-components.esm.js" data-stencil></script> <script nomodule="" src="/build/prodigio-components.js" data-stencil></script> <script>
+            window.que;
+        </script> <link rel="stylesheet" href="./index.css?v1"> </head> <body bgcolor="#fafafc"> <p>small</p> <div> <pro-button variant="primary">primary</pro-button> <pro-button variant="secondary">secondary</pro-button> <pro-button variant="success">success</pro-button> <pro-button variant="danger">danger</pro-button> <pro-button variant="warning">warning</pro-button> <pro-button variant="info">info</pro-button> <pro-button variant="neutral">neutral</pro-button> </div> <p>medium</p> <div> <pro-button variant="primary" size="medium">primary</pro-button> <pro-button variant="secondary" size="medium">secondary</pro-button> <pro-button variant="success" size="medium">success</pro-button> <pro-button variant="danger" size="medium">danger</pro-button> <pro-button variant="warning" size="medium">warning</pro-button> <pro-button variant="info" size="medium">info</pro-button> <pro-button variant="neutral" size="medium">neutral</pro-button> </div> <p>large</p> <div> <pro-button variant="primary" size="large">primary</pro-button> <pro-button variant="secondary" size="large">secondary</pro-button> <pro-button variant="success" size="large">success</pro-button> <pro-button variant="danger" size="large">danger</pro-button> <pro-button variant="warning" size="large">warning</pro-button> <pro-button variant="info" size="large">info</pro-button> <pro-button variant="neutral" size="large">neutral</pro-button> </div> <script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  // auto-unregister service worker during dev mode
+  navigator.serviceWorker.getRegistration().then(function(registration) {
+  if (registration) {
+    registration.unregister().then(function() { location.reload(true) });
+  }
+  });
+}
+</script></body></html>
