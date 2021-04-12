@@ -8,7 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ColorVariants } from "./types/ColorVariants";
 export namespace Components {
     interface ProButton {
-        "size": 'small' | 'medium' | 'large';
+        "disabled": boolean;
+        "size": "small" | "medium" | "large";
         "variant": ColorVariants;
     }
 }
@@ -25,7 +26,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ProButton {
-        "size"?: 'small' | 'medium' | 'large';
+        "disabled"?: boolean;
+        "size"?: "small" | "medium" | "large";
         "variant"?: ColorVariants;
     }
     interface IntrinsicElements {

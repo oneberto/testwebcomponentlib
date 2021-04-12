@@ -1,16 +1,14 @@
-@import '../../mixins/colorVariants.scss';
+@import "../../mixins/colorVariants.scss";
+@import "../../mixins/fontVariants.scss";
 
 :host {
     all: initial;
 }
 
-.custom-button {
-    font-size: 16px;
-    line-height: 22px;
-
+.pro-button {
     &.small {
         height: 32px;
-        padding: 0 8px;
+        padding: 0 16px;
     }
 
     &.medium {
@@ -25,4 +23,18 @@
 
     @include color-variants;
     @include boder-radius;
+    @include button-2;
+
+    &:disabled {
+        background: var(--pro-color-base-200);
+        color: var(--pro-color-base-400);
+        cursor: not-allowed;
+        border: 0;
+
+        &:hover {
+            border: 0;
+            background: var(--pro-color-base-200);
+            color: var(--pro-color-base-400);
+        }
+    }
 }
