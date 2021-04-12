@@ -1,0 +1,1 @@
+import{p as r,b as t}from"./p-240de203.js";(()=>{const t=import.meta.url,b={};return""!==t&&(b.resourcesUrl=new URL(".",t).href),r(b)})().then((r=>t([["p-77b1b5bd",[[1,"pro-button",{variant:[1],size:[1],disabled:[4]}]]]],r)));
