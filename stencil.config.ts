@@ -20,7 +20,7 @@ export const config: Config = {
             serviceWorker: null, // disable service workers
         },
         reactOutputTarget({
-            componentCorePackage: "prodigio-components-react",
+            componentCorePackage: "prodigio-components",
             proxiesFile: "../prodigio-components-react/src/components.ts",
         }),
     ],
