@@ -1,27 +1,32 @@
-import { Config } from '@stencil/core';
-import { sass } from '@stencil/sass';
+import { Config } from "@stencil/core";
+import { sass } from "@stencil/sass";
+import { reactOutputTarget } from "@stencil/react-output-target";
 
 export const config: Config = {
-    namespace: 'prodigio-components',
+    namespace: "prodigio-components",
     outputTargets: [
         {
-            type: 'dist',
-            esmLoaderPath: '../loader',
+            type: "dist",
+            esmLoaderPath: "../loader",
         },
         {
-            type: 'dist-custom-elements-bundle',
+            type: "dist-custom-elements-bundle",
         },
         {
-            type: 'docs-readme',
+            type: "docs-readme",
         },
         {
-            type: 'www',
+            type: "www",
             serviceWorker: null, // disable service workers
         },
+        reactOutputTarget({
+            componentCorePackage: "prodigio-components",
+            proxiesFile: "./component-library-react/src/components.ts",
+        }),
     ],
     plugins: [
         sass({
-            injectGlobalPaths: ['src/global/normalize.scss'],
+            injectGlobalPaths: ["src/global/normalize.scss"],
         }),
     ],
 };
